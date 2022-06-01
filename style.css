@@ -1,0 +1,103 @@
+body{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    width: 100%;
+
+    
+    background-color: antiquewhite;
+}
+
+h1{
+
+    text-align: center;
+    background-color: blueviolet;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+
+}
+
+.faq{
+display: flex;
+flex-direction: column;
+    background-color: aqua;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid black;
+    margin: 10px;
+    position: relative;
+
+}
+
+.faq.active{
+
+    background-color: aliceblue;
+
+    transition: 0.2s ease;
+}
+
+.faq.active::before, .faq.active::after{
+
+    content: '\f075';
+    font-family: 'font awesome 5 free';
+    position: absolute;
+    font-size: 7rem;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.faq.active::before{
+
+    color: blue;
+    top: -20px;
+    left: -5px;
+    transform: rotateY(180deg);
+}
+
+
+
+ button i {
+color: aliceblue;
+    background-color: black;
+    font-size: 15px;
+    padding:10px;
+    margin: 10px;
+   
+    cursor: pointer;
+
+}
+
+button i .fa-times{
+    display: none;
+}
+
+
+.faq.active  .faq-toggle .fa-times{
+    display: block;
+}
+
+.faq.active  .faq-toggle .fa-chevron-down{
+    display: none;
+}
+
+.faq-title{
+    margin: 10px;
+}
+
+.faq-text{
+margin: 20px;
+display: none;
+
+}
+
+.faq.active .faq-text{
+    
+    display: block;
+}
